@@ -1,7 +1,13 @@
-import { useState } from "react";
+import React from "react";
 
 function App() {
-  return <div></div>;
+  const [ativo, setAtivo] = React.useState(true);
+
+  return (
+    <button onClick={() => setAtivo(!ativo)}>
+      {ativo ? "Ativo" : "Inativo"}
+    </button>
+  );
 }
 
 export default App;
